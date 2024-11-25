@@ -1,5 +1,89 @@
 # Changelog
 
+## [21.0.0](https://github.com/npm/pacote/compare/v20.0.0...v21.0.0) (2024-11-25)
+### ⚠️ BREAKING CHANGES
+* `bun.lockb` files are now included in the strict ignore list during packing
+* this module is now compatible with the following node versions: ^20.17.0 || >=22.9.0
+### Bug Fixes
+* [`844dc08`](https://github.com/npm/pacote/commit/844dc08895a16f67573f9d24eab092a32b77e3a3) update node engines to ^20.17.0 || >=22.9.0 (#414) (@wraithgar)
+### Dependencies
+* [`2cb6fa7`](https://github.com/npm/pacote/commit/2cb6fa7ecf8016776077ae76651aaf5e188715e5) [#415](https://github.com/npm/pacote/pull/415) `npm-packlist@10.0.0` (#415)
+* [`47b928c`](https://github.com/npm/pacote/commit/47b928ccefe1f3fc450e4d7df5058bac8a6090f6) [#412](https://github.com/npm/pacote/pull/412) replace node builtin rmSync with rimraf (#412) (@mbtools)
+### Chores
+* [`b6f35a2`](https://github.com/npm/pacote/commit/b6f35a20be8baf7552c63c8255b33937066a1f06) [#402](https://github.com/npm/pacote/pull/402) bump @npmcli/arborist from 7.5.4 to 8.0.0 (#402) (@dependabot[bot])
+* [`1ef54ba`](https://github.com/npm/pacote/commit/1ef54ba08b37fe4d83786d6de70f7a93917d3b6f) [#408](https://github.com/npm/pacote/pull/408) support tests on win32 (#408) (@mbtools)
+* [`555b000`](https://github.com/npm/pacote/commit/555b00080f608468fd9219b77e6b24570e98caa2) [#401](https://github.com/npm/pacote/pull/401) bump @npmcli/template-oss from 4.23.3 to 4.23.4 (#401) (@dependabot[bot], @npm-cli-bot)
+
+## [20.0.0](https://github.com/npm/pacote/compare/v19.0.1...v20.0.0) (2024-10-17)
+### ⚠️ BREAKING CHANGES
+* honors `ignoreScripts` property within options
+### Bug Fixes
+* [`f27af63`](https://github.com/npm/pacote/commit/f27af6334daa0a51af547f1aef64035d4bebd359) [#407](https://github.com/npm/pacote/pull/407) honors `ignoreScripts` option to prevent `prepare` lifecycle script (@reggi)
+
+## [19.0.1](https://github.com/npm/pacote/compare/v19.0.0...v19.0.1) (2024-10-15)
+### Bug Fixes
+* [`cbf94e8`](https://github.com/npm/pacote/commit/cbf94e8b0486e80f8f2e4c9ed7c7d18c3282096b) [#389](https://github.com/npm/pacote/pull/389) prepare script respects scriptshell config (#389) (@milaninfy)
+* [`2b2948f`](https://github.com/npm/pacote/commit/2b2948faaebff35dd469c653e76517887f6e119d) [#403](https://github.com/npm/pacote/pull/403) log tarball retrieval from cache (#403) (@mbtools, @wraithgar)
+### Dependencies
+* [`a9fc4d1`](https://github.com/npm/pacote/commit/a9fc4d13ad4b28bb64ae92077ce6d35d2c130125) [#405](https://github.com/npm/pacote/pull/405) bump sigstore from 2.2.0 to 3.0.0 (#405) (@bdehamer)
+
+## [19.0.0](https://github.com/npm/pacote/compare/v18.0.6...v19.0.0) (2024-09-27)
+### ⚠️ BREAKING CHANGES
+* `pacote` now supports node `^18.17.0 || >=20.5.0`
+### Bug Fixes
+* [`03b31ca`](https://github.com/npm/pacote/commit/03b31cacfe3833a2e435ed50237dfee8014538ae) [#392](https://github.com/npm/pacote/pull/392) align to npm 10 node engine range (@reggi)
+### Dependencies
+* [`f055f71`](https://github.com/npm/pacote/commit/f055f71f3477f5ce234a42f559e53239cd1dd949) [#395](https://github.com/npm/pacote/pull/395) bump npm-pick-manifest from 9.1.0 to 10.0.0 (#395) (@dependabot[bot])
+* [`932b9ab`](https://github.com/npm/pacote/commit/932b9ab4d133b39b96a03e73d97e08c2f43494f7) [#396](https://github.com/npm/pacote/pull/396) bump @npmcli/package-json from 5.2.1 to 6.0.0 (#396) (@dependabot[bot])
+* [`a1621f9`](https://github.com/npm/pacote/commit/a1621f94537af0e71e66d293d35ff482e4eef0b5) [#397](https://github.com/npm/pacote/pull/397) bump npm-registry-fetch from 17.1.0 to 18.0.0 (#397) (@dependabot[bot])
+* [`c776199`](https://github.com/npm/pacote/commit/c7761995fb79bd6c5b987127f331c7df199833dd) [#398](https://github.com/npm/pacote/pull/398) bump cacache from 18.0.4 to 19.0.0 (#398) (@dependabot[bot])
+* [`6d59022`](https://github.com/npm/pacote/commit/6d590229d709005ec0ed841fa1f4cdf110cffb86) [#399](https://github.com/npm/pacote/pull/399) bump @npmcli/git from 5.0.8 to 6.0.0 (#399)
+* [`21ea2d4`](https://github.com/npm/pacote/commit/21ea2d49ce6dd76ffc08540a1670da79126199fb) [#400](https://github.com/npm/pacote/pull/400) bump @npmcli/run-script from 8.1.0 to 9.0.0 (#400)
+* [`eddbc01`](https://github.com/npm/pacote/commit/eddbc01e5cbd164437effbe7886385e875517cbf) [#392](https://github.com/npm/pacote/pull/392) `ssri@12.0.0`
+* [`6c672e9`](https://github.com/npm/pacote/commit/6c672e99cb33224bfa4d7388d772083364bba293) [#392](https://github.com/npm/pacote/pull/392) `proc-log@5.0.0`
+* [`03ba2a2`](https://github.com/npm/pacote/commit/03ba2a21f1d2b6a67813f6dad2459d184a8d6566) [#392](https://github.com/npm/pacote/pull/392) `npm-packlist@9.0.0`
+* [`2710286`](https://github.com/npm/pacote/commit/2710286f44625474af23a529c12ea3c8b0cbf4aa) [#392](https://github.com/npm/pacote/pull/392) `npm-package-arg@12.0.0`
+* [`aa0bd4a`](https://github.com/npm/pacote/commit/aa0bd4aaf59d2d3c34da33352293ad2774e3d915) [#392](https://github.com/npm/pacote/pull/392) `@npmcli/promise-spawn@8.0.0`
+* [`df23343`](https://github.com/npm/pacote/commit/df233432a6ac4c25b8744d429f5e7e358b24abea) [#392](https://github.com/npm/pacote/pull/392) `@npmcli/installed-package-contents@3.0.0`
+### Chores
+* [`e4ed5cd`](https://github.com/npm/pacote/commit/e4ed5cd66c4bb4c4faef4a511b6d48c72d49470b) [#392](https://github.com/npm/pacote/pull/392) bump hosted-git-info ^7.0.0 to ^8.0.0 (@reggi)
+* [`2871f56`](https://github.com/npm/pacote/commit/2871f569064ebaf4a1ae73a42d502e3876d0a18b) [#392](https://github.com/npm/pacote/pull/392) run template-oss-apply (@reggi)
+* [`39643f1`](https://github.com/npm/pacote/commit/39643f1e956f83dd84f7f0ab6278f7051a69b32d) [#382](https://github.com/npm/pacote/pull/382) bump @npmcli/eslint-config from 4.0.5 to 5.0.0 (@dependabot[bot])
+* [`7e33c82`](https://github.com/npm/pacote/commit/7e33c829b0143c9a22f1418d6f29f9a7aac03d00) [#383](https://github.com/npm/pacote/pull/383) postinstall for dependabot template-oss PR (@hashtagchris)
+* [`e4e07bf`](https://github.com/npm/pacote/commit/e4e07bfb37190ef8c129ca6a643b91a4099560d8) [#383](https://github.com/npm/pacote/pull/383) bump @npmcli/template-oss from 4.23.1 to 4.23.3 (@dependabot[bot])
+
+## [18.0.6](https://github.com/npm/pacote/compare/v18.0.5...v18.0.6) (2024-05-07)
+
+### Bug Fixes
+
+* [`79441a5`](https://github.com/npm/pacote/commit/79441a5cce9bc9927ae3e439188c2add5fa70d89) [#371](https://github.com/npm/pacote/pull/371) clean up requires (#371) (@wraithgar)
+* [`b19aacb`](https://github.com/npm/pacote/commit/b19aacb925e44ccce1d99a713ad12bdf7b4a008f) [#369](https://github.com/npm/pacote/pull/369) isolate full and corgi packuments in packumentCache (#369) (@wraithgar)
+
+## [18.0.5](https://github.com/npm/pacote/compare/v18.0.4...v18.0.5) (2024-05-06)
+
+### Bug Fixes
+
+* [`5e75582`](https://github.com/npm/pacote/commit/5e755820b70f60ea136d9e85eb42a6c2d9718472) [#368](https://github.com/npm/pacote/pull/368) dont set _contentLength if not in headers (#368) (@lukekarrys)
+* [`1b6950b`](https://github.com/npm/pacote/commit/1b6950b993f07f87cf66a0e4d76e646939174d88) [#365](https://github.com/npm/pacote/pull/365) move bin to its own directory (@lukekarrys)
+* [`1b6950b`](https://github.com/npm/pacote/commit/1b6950b993f07f87cf66a0e4d76e646939174d88) [#365](https://github.com/npm/pacote/pull/365) refactor: symbol cleanup (#365) (@lukekarrys)
+
+## [18.0.4](https://github.com/npm/pacote/compare/v18.0.3...v18.0.4) (2024-05-04)
+
+### Bug Fixes
+
+* [`5fd2c80`](https://github.com/npm/pacote/commit/5fd2c80d5a0b47692fc36175bf37bded451dadac) [#363](https://github.com/npm/pacote/pull/363) linting: no-unused-vars (@lukekarrys)
+
+### Chores
+
+* [`d867639`](https://github.com/npm/pacote/commit/d867639ef137f924dbe1fe3d83cd230a142e703e) [#363](https://github.com/npm/pacote/pull/363) bump @npmcli/template-oss to 4.22.0 (@lukekarrys)
+* [`a235f37`](https://github.com/npm/pacote/commit/a235f37a7b886c4f3e38eb3a2c34a0d240a880bb) [#363](https://github.com/npm/pacote/pull/363) postinstall for dependabot template-oss PR (@lukekarrys)
+
+## [18.0.3](https://github.com/npm/pacote/compare/v18.0.2...v18.0.3) (2024-04-30)
+
+### Dependencies
+
+* [`5ecce7a`](https://github.com/npm/pacote/commit/5ecce7ac82ba9e710d3bb21ec9096a992516a2a1) [#360](https://github.com/npm/pacote/pull/360) `npm-registry-fetch@17.0.0` (#360)
+
 ## [18.0.2](https://github.com/npm/pacote/compare/v18.0.1...v18.0.2) (2024-04-24)
 
 ### Bug Fixes

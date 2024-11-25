@@ -1,22 +1,20 @@
 const t = require('tap')
-const pacote = require('../lib/index.js')
-const fs = require('fs')
-
+const fs = require('node:fs')
+const { resolve, relative } = require('node:path')
+const DirFetcher = require('../lib/dir.js')
+const FileFetcher = require('../lib/file.js')
 const GitFetcher = require('../lib/git.js')
 const RegistryFetcher = require('../lib/registry.js')
-const FileFetcher = require('../lib/file.js')
-const DirFetcher = require('../lib/dir.js')
 const RemoteFetcher = require('../lib/remote.js')
+const pacote = require('../lib/index.js')
+const cleanSnapshot = require('./helpers/clean-snapshot.js')
 
-const { resolve, relative } = require('path')
 const abbrev = resolve(__dirname, 'fixtures/abbrev-1.1.1.tgz')
 const abbrevspec = `file:${relative(process.cwd(), abbrev)}`
 
 const me = t.testdir()
 
-t.cleanSnapshot = str => str
-  .split(process.cwd()).join('${CWD}')
-  .replace(/\\/g, '/')
+t.cleanSnapshot = str => cleanSnapshot(str)
 
 // Putting all these tests inside a `t.test` suite broke the tests. They either
 // didn't run or failed w/ no message.  Ignoring promise/catch-or-return for now.
